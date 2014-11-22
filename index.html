@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Polymer-ная верстка</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="vendor/shower-ribbon/styles/screen.css">
+	<style>
+		#Cover {
+			background: #eee;
+			color: #444;
+		}
+		#Cover h2 {
+			margin:30px 0 0;
+			text-align:center;
+			font-size:70px;
+		}
+		#Cover p {
+			margin:10px 0 0;
+			text-align:center;
+			font-style:italic;
+			font-size:20px;
+		}
+		#Cover p a:first-letter {
+			color: #e90b11;
+		}
+		#Cover .logo {
+			position: static;
+			display: block;
+			margin: 0 auto;
+		}
+		#Polyvinyl {
+			background: white url(images/polyvinyl.svg) center repeat-x;
+		}
+		.censored {
+			font-size: 26px;
+			text-transform: uppercase;
+			width: 300px;
+			margin: 0 auto;
+			padding: 0.5em;
+			background: #000;
+			text-align: center;
+			color: #FFFFFF;
+			position: relative;
+			top: 50px;
+			transform: rotate(-23deg);
+		}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Polymer-ная верстка</h1>
+		<p></p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>Polymer-ная верстка</h2>
+		<p><a href="http://github.com/just-boris">Boris Serdyuk</a></p>
+		<p><img class="logo" src="images/p-logo.svg"></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Простая веб-страница</h2>
+		<pre>
+			<code>&lt;h1&gt;Simple page&lt;/h1&gt;</code>
+			<code>&lt;p&gt;Text on simple page&lt;/p&gt;</code>
+			<code>&lt;a href="/page-2"&gt;Show next simple page&lt;/a&gt;</code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Сложная веб-страница</h2>
+		<div class="censored">Censored</div>
+	</div></section>
+	<section class="slide" id="Polyvinyl"><div>
+		<h2>Что такое полимер</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Polymer framework</h2>
+		<br/>
+		<p style="text-align: center;">
+			<code>&lt;block/&gt;</code> &mdash; <code>&lt;block/&gt;</code> &mdash; <code>&lt;block/&gt;</code> &mdash; <code>&lt;block/&gt;</code>
+		</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Наше сложное приложение</h2>
+		<img src="images/ymaps-app.png" alt="ymaps-app"/>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Блоки</h2>
+		<p>Here will be couple of blocks.</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Polymer-element (блок)</h2>
+		<pre>
+			<code>Polymer('my-element', {</code>
+			<code>    <mark>created:</mark> function() { ... },</code>
+			<code>    <mark>ready:</mark> function() { ... },</code>
+			<code>    <mark>detached:</mark> function() { ... },</code>
+			<code>    <mark>attributeChanged:</mark> function(attrName, oldVal, newVal) {</code>
+			<code>         console.log(attrName, 'old: ' + oldVal, 'new:', newVal);</code>
+			<code>    },</code>
+			<code>});</code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Элемент имеет содержимое</h2>
+		<pre>
+			<code>&lt;template&gt;</code>
+			<code>  &lt;!-- здесь верстка --&gt;</code>
+			<code>  &lt;content&gt;&lt;/content&gt;</code>
+			<code>&lt;/template&gt;</code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Shadow DOM защитит стили элемента</h2>
+		<pre>
+			<code><mark class="important">&lt;style&gt;</mark></code>
+			<code><mark class="important">&lt;my-element&gt;</mark></code>
+			<code>    #shadow-root</code>
+			<code>        <mark>&lt;style&gt;</mark></code>
+			<code>        <mark>&lt;p&gt;этот текст в Shadow DOM&lt;p&gt;</mark></code>
+			<code>    <mark class="important">&lt;p&gt;а этот абзац снаружи&lt;p&gt;</mark></code>
+			<code><mark class="important">&lt;/my-element&gt;</mark></code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Возможности в template</h2>
+		<pre>
+			<code><mark>{{items.length}}</mark> элемента</code>
+			<code>&lt;template <mark>repeat="{{item in items}}"</mark>&gt;</code>
+			<code>    {{item.title}}</code>
+			<code>&lt;/template&gt;</code>
+		</pre>
+		<p>Больше в <a href="https://www.polymer-project.org/docs/polymer/binding-types.html">документации</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Переиспользование</h2>
+		<p>С помощью <a href="http://www.html5rocks.com/en/tutorials/webcomponents/imports/">HTML-imports</a></p>
+		<pre>
+			<code>&lt;link rel="import"</code>
+			<code>    href="bower_components/my-element/my-element.html" /&gt;</code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Тестирование</h2>
+		<p><code>npm install web-component-tester</code></p>
+		<ul>
+			<li>Встроенные mocha+chai</li>
+			<li>Тесты пишутся как html (можно и на js)</li>
+			<li>Без PhantomJS, он не поддерживает новые технологии</li>
+			<li>Зато с SauceLabs или другим Selenium Grid</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Сборка</h2>
+		<blockquote>
+			<p>Технологический процесс при котором происходит сшивание полимеров в единую сетку, называется <b>вулканизацией</b></p>
+		</blockquote>
+		<p><code>npm install -g vulcanize</code></p>
+		<p>А также <a href="https://github.com/sindresorhus/gulp-vulcanize">gulp-vulcanize</a>,
+			<a href="https://github.com/Polymer/grunt-vulcanize">grunt-vulcanize</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>А вот и результат</h2>
+		<p><a href="https://github.com/just-boris/polymer-ymaps">Элемент &lt;yandex-map&gt;</a></p>
+		<p><a href="http://catatron.com/polymer-ymaps/demo.html">Пример его использования</a></p>
+		<p><a href="http://catatron.com/polymer-ymaps/">Милая документация</a></p>
+	</div></section>
+	<div class="progress"><div></div></div>
+	<script src="vendor/shower-core/shower.min.js"></script>
+</body>
+</html>

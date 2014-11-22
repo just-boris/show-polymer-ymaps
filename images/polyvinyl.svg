@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8054) - http://www.bohemiancoding.com/sketch -->
+    <title>polymer 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <text id="C" sketch:type="MSTextLayer" font-family="Helvetica" font-size="22" font-weight="normal" fill="#313131">
+            <tspan x="53" y="88">C</tspan>
+        </text>
+        <text id="C" sketch:type="MSTextLayer" font-family="Helvetica" font-size="22" font-weight="normal" fill="#313131">
+            <tspan x="93" y="88">C</tspan>
+        </text>
+        <text id="H" sketch:type="MSTextLayer" font-family="Helvetica" font-size="22" font-weight="normal" fill="#313131">
+            <tspan x="53" y="48">H</tspan>
+        </text>
+        <text id="H" sketch:type="MSTextLayer" font-family="Helvetica" font-size="22" font-weight="normal" fill="#313131">
+            <tspan x="53" y="129">H</tspan>
+        </text>
+        <text id="Cl" sketch:type="MSTextLayer" font-family="Helvetica" font-size="22" font-weight="normal" fill="#313131">
+            <tspan x="93" y="129">Cl</tspan>
+        </text>
+        <text id="H" sketch:type="MSTextLayer" font-family="Helvetica" font-size="22" font-weight="normal" fill="#313131">
+            <tspan x="93" y="48">H</tspan>
+        </text>
+        <path d="M60.1573869,51.2147404 L59.8855398,65.8944815" id="Path-12" stroke="#313131" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M100.157387,51.2147404 L99.8855398,65.8944815" id="Path-13" stroke="#313131" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M100.157387,93.2147404 L99.8855398,107.894482" id="Path-14" stroke="#313131" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M60.1573869,93.2147404 L59.8855398,107.894482" id="Path-15" stroke="#313131" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M73.8323289,79.9641027 L88.6521222,79.9641027" id="Path-16" stroke="#313131" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M27.5035373,79.9641027 L48.6521222,79.9641027" id="Path-17" stroke="#313131" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M111.821151,79.9641027 L132.965003,79.9641027" id="Path-18" stroke="#313131" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M33.4065514,20 L20.4914402,20.230627 L20.491441,140 L33.4065518,140" id="Path-19" stroke="#979797" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M141.406551,20 L128.49144,20.230627 L128.491441,140 L141.406552,140" id="Path-20" stroke="#979797" stroke-width="2" sketch:type="MSShapeGroup" transform="translate(134.500000, 80.000000) rotate(-180.000000) translate(-134.500000, -80.000000) "></path>
+    </g>
+</svg>
