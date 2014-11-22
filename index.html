@@ -18,20 +18,30 @@
 		}
 		#Cover p {
 			margin:10px 0 0;
-			text-align:center;
 			font-style:italic;
 			font-size:20px;
 		}
-		#Cover p a:first-letter {
+		#Cover p a {
+			color: inherit;
+			background: none;
+		}
+		#Cover p:first-letter {
 			color: #e90b11;
 		}
 		#Cover .logo {
 			position: static;
-			display: block;
-			margin: 0 auto;
 		}
 		#Polyvinyl {
 			background: white url(images/polyvinyl.svg) center repeat-x;
+		}
+		#Credits p {
+			position: absolute;
+			top: 65%;
+			left: 0;
+			width: 100%;
+		}
+		.text-center {
+			text-align: center;
 		}
 		.censored {
 			font-size: 26px;
@@ -51,12 +61,11 @@
 <body class="list">
 	<header class="caption">
 		<h1>Polymer-ная верстка</h1>
-		<p></p>
+		<p><a href="http://github.com/just-boris">Борис Сердюк</a></p>
 	</header>
 	<section class="slide cover" id="Cover"><div>
 		<h2>Polymer-ная верстка</h2>
-		<p><a href="http://github.com/just-boris">Boris Serdyuk</a></p>
-		<p><img class="logo" src="images/p-logo.svg"></p>
+		<p class="text-center"><img class="logo" src="images/p-logo.svg"></p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Простая веб-страница</h2>
@@ -76,7 +85,7 @@
 	<section class="slide"><div>
 		<h2>Polymer framework</h2>
 		<br/>
-		<p style="text-align: center;">
+		<p class="text-center">
 			<code>&lt;block/&gt;</code> &mdash; <code>&lt;block/&gt;</code> &mdash; <code>&lt;block/&gt;</code> &mdash; <code>&lt;block/&gt;</code>
 		</p>
 	</div></section>
@@ -164,6 +173,13 @@
 		<p><a href="https://github.com/just-boris/polymer-ymaps">Элемент &lt;yandex-map&gt;</a></p>
 		<p><a href="http://catatron.com/polymer-ymaps/demo.html">Пример его использования</a></p>
 		<p><a href="http://catatron.com/polymer-ymaps/">Милая документация</a></p>
+	</div></section>
+	<section class="slide shout" id="Credits"><div>
+		<h2>PRs welcome!</h2>
+		<p class="text-center">
+			<a href="https://github.com/just-boris/">github.com/just-boris</a><br/>
+			<a href="mailto:just-boris@yandex-team.ru">just-boris@yandex-team.ru</a>
+		</p>
 	</div></section>
 	<div class="progress"><div></div></div>
 	<script src="vendor/shower-core/shower.min.js"></script>
