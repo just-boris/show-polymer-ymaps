@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="vendor/shower-ribbon/styles/screen.css">
+	<link rel="stylesheet" href="ribbon-overrides.css">
 	<style>
 		#Cover {
 			background: #eee;
@@ -42,6 +43,11 @@
 		}
 		.text-center {
 			text-align: center;
+		}
+		.centered {
+			position: absolute;
+			top: 50%;
+			font-size: 36px;
 		}
 		.censored {
 			font-size: 26px;
@@ -98,17 +104,33 @@
 		<img src="images/ymaps-app-blocks.png" alt="ymaps-app"/>
 	</div></section>
 	<section class="slide"><div>
+		<h2>Вид изнутри</h2>
+		<pre>
+			<code>&lt;yandex-map&gt;&lt;/yandex-map&gt;</code>
+			<code>&lt;markers-list&gt;</code>
+			<code>    &lt;template repeat="{{marker in markers}}"&gt;</code>
+            <code>        &lt;marker-item marker="{{marker}}"&gt;&lt;/marker-item&gt;</code>
+            <code>    &lt;/template&gt;</code>
+			<code>    &lt;marker-new&gt;&lt;/marker-new&gt;</code>
+			<code>&lt;/markers-list&gt;</code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
 		<h2>Polymer-element (блок)</h2>
 		<pre>
 			<code>Polymer('my-element', {</code>
 			<code>    <mark>created:</mark> function() { ... },</code>
 			<code>    <mark>ready:</mark> function() { ... },</code>
 			<code>    <mark>detached:</mark> function() { ... },</code>
-			<code>    <mark>attributeChanged:</mark> function(attrName, oldVal, newVal) {</code>
-			<code>         console.log(attrName, 'old: ' + oldVal, 'new:', newVal);</code>
-			<code>    },</code>
+			<code>    <mark>attributeChanged:</mark> function(attr, oldVal, newVal) {</code>
+			<code>        console.log(attr, 'old: ' + oldVal, 'new:', newVal);</code>
+			<code>    }</code>
 			<code>});</code>
 		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>На самом деле</h2>
+		<p class="centered"><code>document.registerElement('my-element');</code></p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Элемент внутри</h2>
@@ -118,6 +140,20 @@
 			<code>  &lt;content&gt;&lt;/content&gt;</code>
 			<code>&lt;/template&gt;</code>
 		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Возможности в template</h2>
+		<pre>
+			<code><mark>{{items.length}}</mark> элемента</code>
+			<code>&lt;template <mark>repeat="{{item in items}}"</mark>&gt;</code>
+			<code>    {{item.title}}</code>
+			<code>&lt;/template&gt;</code>
+		</pre>
+		<p>Больше в <a href="https://www.polymer-project.org/docs/polymer/binding-types.html">документации</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Функция, которая творит чудеса</h2>
+		<p class="centered"><code>element.createShadowRoot();</code></p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Shadow DOM защитит стили элемента</h2>
@@ -132,21 +168,25 @@
 		</pre>
 	</div></section>
 	<section class="slide"><div>
-		<h2>Возможности в template</h2>
+		<h2>Собираем все вместе</h2>
 		<pre>
-			<code><mark>{{items.length}}</mark> элемента</code>
-			<code>&lt;template <mark>repeat="{{item in items}}"</mark>&gt;</code>
-			<code>    {{item.title}}</code>
-			<code>&lt;/template&gt;</code>
+			<code>&lt;<mark>polymer-element</mark> name="my-element"&gt;</code>
+			<code>    &lt;template&gt;</code>
+			<code>    &lt;/template&gt;</code>
+			<code>    &lt;script&gt;Polymer({})&lt;/script&gt;</code>
+			<code>&lt;<mark>/polymer-element</mark>&gt;</code>
 		</pre>
-		<p>Больше в <a href="https://www.polymer-project.org/docs/polymer/binding-types.html">документации</a></p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Переиспользование</h2>
 		<p>С помощью <a href="http://www.html5rocks.com/en/tutorials/webcomponents/imports/">HTML-imports</a></p>
 		<pre>
 			<code>&lt;link rel="import"</code>
-			<code>    href="bower_components/my-element/my-element.html" /&gt;</code>
+			<code>  href="bower_components/polymer-ymaps/polymer-ymaps.html"/&gt;</code>
+		</pre>
+		<p>Устанавливаем через bower</p>
+		<pre>
+			<code>bower install polymer-ymaps</code>
 		</pre>
 	</div></section>
 	<section class="slide"><div>
